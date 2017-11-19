@@ -16,7 +16,7 @@ $ open http://www.boost.org/doc/libs/1_65_0/doc/html/program_options.html
 
 ## Tutorial
 
-Задаем алиасы и переменные окружения
+Задаем переменные окружения
 ```ShellSession
 $ export GITHUB_USERNAME=<имя_пользователя>
 $ alias edit=<nano|vi|vim|subl>
@@ -35,7 +35,7 @@ $ cd projects/lab11
 $ git remote remove origin
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab11
 ```
-Настраиваем boost в CMakeLists
+Настраиваем `boost` в `CMakeLists`
 ```ShellSession
 # boost::program_options
 $ edit CMakeLists.txt
@@ -78,7 +78,7 @@ $ test -f arg.log
 $ echo $?
 0
 ```
-прописываем скрипт в travis
+прописываем скрипт в `travis`
 ```ShellSession
 $ cat >> .travis.yml <<EOF
 - cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
@@ -107,7 +107,7 @@ $ git add .
 $ git commit -m"changed format output"
 $ git push origin master
 ```
-включаем travis
+включаем `travis`
 ```ShellSession
 $ travis login --auto
 $ travis enable
